@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image:url('https://i.ibb.co/CVkshgy/Bubbly-enquiry22.jpg')">  
+    
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    
+    <a href="http://127.0.0.1:5000/" style="font-family: 'Alegreya';color:black;background-color:white;padding:5px;font-weight:900;font-size: 30px;position:absolute;top:80px;left:80px;border:5px solid black;z-index:9;text-decoration: none;">Home</a>
+        
+    <body style="margin: 20px;">
+        
+       <div style="position:absolute;font-family: 'Alegreya';color:black;background-color:white;padding:auto;width:90%; height:90%;margin:auto; padding:auto;margin:2%;">
+
+        
+           <div style="position:absolute;top: 28%;left: 35%;margin: -25px 0 0 -25px;font-family: 'Alegreya';color:black;background-color:white;padding:auto;">
+            {% if count %}
+                <p style="font-weight:900;font-size: 42px;margin-left:110px;"> Uploaded {{ count }} pages </p>
+                <p style="font-weight:900;font-size: 42px;"> Say "SWIPE" for the next page!</p>
+
+            <form method="post" action="/files_page">
+                <input type="submit" value="Begin" style="font-weight:900;font-size: 42px;font-family: 'Alegreya';background-color:black;color:white;border:none;padding:10px;width:520px"><br><br> 
+            </form> 
+            {% else %}
+               <p style="font-weight:900;font-size: 42px;margin-left:110px;"> Uploaded zero pages </p>
+               <form method="post" action="/">
+                <input type="submit" value="Home" style="font-weight:900;font-size: 42px;font-family: 'Alegreya';background-color:black;color:white;border:none;padding:10px;width:520px"><br><br> 
+            </form> 
+            {% endif %}
+               
+ 
+        </div>
+        </div>
+    </body>
+    
+</html>

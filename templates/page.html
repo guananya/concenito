@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html style="background-color:thistle;">
+<head>
+	<meta charset="UTF-8">
+    
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+
+	<title>Audio Recording Demo With WebAudioRecorder.js - addpipe.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+    
+</head>
+<body>
+    <h1 hidden>SHEET MUSIC</h1>
+    
+    
+	<div style="max-width: 28em;">
+
+		<div id="controls">
+			<button style="display:none;" id="recordButton">Record</button>
+			<button style="display:none;" id="stopButton" disabled>Stop</button>
+		</div>
+		<div style="display:none;" id="formats"></div>
+		<pre style="display:none;">Log</pre>
+		<pre style="display:none;" id="log"></pre>
+
+		<pre style="display:none;">Recordings</pre>             
+		<ol style="display:none;" id="recordingsList"></ol>
+	</div>
+    <form id="formData" method="post" action="/predict">
+        <input style="display:none;" id="submit" type="submit" value="Messages"><br><br> 
+    </form>
+    
+    {% if result %}
+            <p style="font-weight:900;font-size: 30px;font-family: 'Alegreya';color:white;position:absolute; top:5px;"> {{ result }} </p>
+    {% endif %}
+    
+        <a href="http://127.0.0.1:5000/" style="font-family: 'Alegreya';color:white;background-color:thistle;padding:5px;font-weight:900;font-size: 30px;position:absolute;top:100px;border:5px solid white;z-index:9;text-decoration: none;">Home</a>
+
+    
+    <div id="logo"> 
+        <img src="{{ source }}" alt="User Image" class="center"> 
+        
+    </div> 
+    
+
+    
+
+	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+	<script src="/static/WebAudioRecorder.min.js"></script>
+	<script src="/static/app.js"></script>
+
+</body>
+</html>
