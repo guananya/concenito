@@ -1,4 +1,4 @@
-# concenito
+# Concenito
 A flask app that flips pages on voice command!
 
 concenito.com
