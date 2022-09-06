@@ -5,12 +5,12 @@ concenito.com
 
 Note that the instructions assume you have installed python on your computer.
 
-#Downloading the code:
+## Downloading the code:
 1. Click on the green "Code" button on the top right corner of this page.
 2. Click "Download ZIP" 
 3. Click on the zip file to unzip it
 
-#Running the app:
+## Running the app:
 1. Go to your finder and find the unzipped folder containing the code
 2. Click on that folder with two fingers and then click the key, "option" on your keyboard (on the bottom left side)
 3. Once you do that, you should see "Copy ____ as pathname". Click on that.
